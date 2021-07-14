@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>QSpeak Email Signature Generator</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+    body {
+    background-color: #4e598c;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+#presignature h1 {
+    Font-Family: 'PT Sans', Sans-Serif;
+    Font-Size: 46px;
+    color: #fcaf58;
+}
+
+a {
+    color:white;
+}
+
+#presignature {
+    Font-Family: 'Playfair Display', Serif;
+    Font-Size: 16px;
+    color: white;
+}
+
+.flex-container {
+    display: flex;
+}
+
+.form {
+    flex: 1;
+    padding: 25px;
+    Font-Family: 'Playfair Display', Serif;
+    border: solid 5px;
+    border-radius: 15px;
+    margin-right: 20px;
+    background-color: #f9c784;
+    color: black;
+}
+
+.signature {
+    border: solid 5px;
+    border-radius: 15px;
+    padding: 25px;
+    background-color: white;
+    flex:1;
+}
+
+input {
+    width: 100%;   
+}
+
+#butt {
+    width: 100%;
+    background-color: #4CAF50; /* Green */
+     border: none;
+     color: white;
+     padding: 15px 32px;
+     text-align: center;
+     text-decoration: none;
+     display: inline-block;
+     font-size: 16px;
+}
+
+#butt:hover{
+    width: 100%;
+    background-color: #9fff75; /* Green */
+     border: none;
+     color: white;
+     padding: 15px 32px;
+     text-align: center;
+     text-decoration: none;
+     display: inline-block;
+     font-size: 16px;
+}
+    </style>
+</head>
+<body>
+    
+<script>
+function myFunction() {
+  var name = document.getElementById("frm1").name.value;
+  var pronouns = document.getElementById("frm1").pronouns.value;
+  var position = document.getElementById("frm1").position.value;
+  var email = document.getElementById("frm1").email.value;
+  var footer = document.getElementById("frm1").footer.value;
+    
+  if (pronouns.length > 0) {
+    var pro_text = " (".concat(pronouns, ")");
+  } else {
+    var pro_text = "";
+  };
+  document.getElementById("name").innerHTML = name.concat(pro_text);
+  document.getElementById("position").innerHTML = position;
+  if (email.length > 0) {
+      document.getElementById("email").innerHTML = email;
+      var email_link = document.getElementById('email');
+        email_link.setAttribute('href', 'mailto:'.concat(email));
+  } else {
+      document.getElementById("email").innerHTML = "lgbt.colourfully@gmail.com";
+      var email_link = document.getElementById('email');
+        email_link.setAttribute('href', 'mailto:lgbt.colourfully@gmail.com');
+  };
+  document.getElementById("footer").innerHTML = footer;
+};
+
+function reset () {
+  var name = "Team QSpeak";
+  var pronouns = "";
+  var position = "";
+  var email = "";
+  var footer = "Acknowledging that I live and work in the Dish with One Spoon Territory, the home of the Anishnaabe, Haudenosaunee and Mississaugas of the Credit.";
+    
+  if (pronouns.length > 0) {
+    var pro_text = " (".concat(pronouns, ")");
+  } else {
+    var pro_text = "";
+  };
+  document.getElementById("name").innerHTML = name.concat(pro_text);
+  document.getElementById("position").innerHTML = position;
+  if (email.length > 0) {
+      document.getElementById("email").innerHTML = email;
+      var email_link = document.getElementById('email');
+        email_link.setAttribute('href', 'mailto:'.concat(email));
+  } else {
+      document.getElementById("email").innerHTML = "lgbt.colourfully@gmail.com";
+      var email_link = document.getElementById('email');
+        email_link.setAttribute('href', 'mailto:lgbt.colourfully@gmail.com');
+  };
+  document.getElementById("footer").innerHTML = footer;
+};
+
+function copy_sig() {
+    var target = document.getElementById('signature_id');
+      var range, select;
+      if (document.createRange) {
+        range = document.createRange();
+        range.selectNode(target)
+        select = window.getSelection();
+        select.removeAllRanges();
+        select.addRange(range);
+        document.execCommand('copy');
+        select.removeAllRanges();
+      } else {
+        range = document.body.createTextRange();
+        range.moveToElementText(target);
+        range.select();
+        document.execCommand('copy');
+      }
+};
+</script>
+
+<div id="presignature">
+    <h1>Team QSpeak Email Signature Generator</h1>
+    <p>Please use a QSpeak Signature if you are sending an email on behalf of QSpeak - even if it is through a personal email!</p>
+    <p> How to set up a QSpeak Email Signature: </p>
+    <ol>
+        <li>Enter your information on the form to the right to modify the email signature. Should you make any errors just hit 'Reset'.</li>
+        <li>For the footer, consider adding in a land acknowledgement. Use <a href="https://native-land.ca/" target="_blank">native-land.ca</a> to find which treaty/territorial lands you reside and work in.</li>
+        <li>Click "Submit" to generate your email signature. Feel free to directly edit your signature as needed.</li>
+        <li>Click "Copy Signature" to add your QSpeak signature to your clipboard.</li>
+    </ol><br>
+</div>
+<div class="flex-container">
+    <div class="form">
+<form id="frm1">
+  Name<br><input type="text" name="name"><br>
+  Pronouns (optional)<br><input type="text" name="pronouns"><br>
+  Position <br><select name="position">
+      <option value="">(None)</option>
+    <option value="Communications/Outreach">Communications/Outreach</option>
+      <option value="Program Development">Program Development</option>
+      <option value="Graphics">Graphics</option>
+      <option value="QSpeak Ambassador">QSpeak Ambassador</option>
+      <option value="Project Coordinator">Project Coordinator</option>
+    </select><br>
+  Email (leave blank for QSpeak email)<br><input type="text" name="email"><br>
+  Footer (consider adding a Land Acknowledgement)<br><textarea name="footer" style="width:100%; height: 70px; resize: none" wrap="soft"> </textarea>
+<br><br>
+  <input type="button" id='butt' onclick="myFunction()" value="Submit"> <br>
+</form> <br>
+   <button onclick="reset()" id='butt'>Reset</button> <br><br>
+  <button onclick="copy_sig()" id='butt'>Copy signature</button>
+    </div>
+<div>
+  <br>
+</div>
+    
+<div class="signature" dir="ltr" data-smartmail="gmail_signature">
+    <div id="signature_id" contenteditable="true">
+  <div dir="ltr">
+    <table style="color: #486589; font-family: Montserrat,sans-serif; font-size: 17px;" border="0" width="500" cellspacing="0" cellpadding="0">
+      <tbody>
+        <tr>
+          <td>
+            <table border="0" cellspacing="0" cellpadding="0">
+              <tbody>
+                <tr>
+                  <td style="padding: 0px 8px 0px 0px; vertical-align: top;" valign="top" width="100">
+                    <a href="http://www.qspeak.org/" style="background-color: transparent;" target="_blank" rel="noopener">
+                      <img style="vertical-align: middle; border-style: none; max-width: 100%; width: 100px; border-radius: 0%;" src="https://ci5.googleusercontent.com/proxy/pWxVxZ6lhSZLgnhVAB7UnzbnUgGsiTMcQ5VYCroU8MibbTBQu35OoUsurXKnRyADEtMNQzGzSDHeTLSYYdU3n5zK9zKYYTcx3z_sCbKS54QuheDzOitLAfHR5Y9XXc5ep846uglG-meJvHScUOo=s0-d-e1-ft#https://img.mysignature.io/p/1/d/5/1d5d5dea-4701-564e-8868-e39a7669e4c8.png?time=1602997636" alt="created with MySignature.io" width="100">
+                    </a>
+                  </td>
+                  <td style="font-size: 1em; padding: 0px 15px 0px 8px; vertical-align: top;" valign="top">
+                    <table style="line-height: 1.4; font-family: Verdana,Geneva,sans-serif; font-size: 15.3px; color: #000001;" border="0" cellspacing="0" cellpadding="0">
+                      <tbody>
+                        <tr>
+                          <td>
+                            <div style="font-stretch: normal; font-size: 1.2em; line-height: normal; font-family: Verdana,Geneva,sans-serif;"><div id="name">Team QSpeak</div></div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 4px 0px;">
+                            <div id="position" style="font-family: Verdana,Geneva,sans-serif;"></div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <span style="font-family: Verdana,Geneva,sans-serif; color: #63ccc8;">website:&nbsp;</span>&nbsp; 
+                            <span style="font-family: Verdana, Geneva, sans-serif;">
+                              <a href="http://www.qspeak.org" style="background-color: transparent; font-family: Verdana,Geneva,sans-serif; color: #000001;" target="_blank" rel="noopener">www.qspeak.org</a>
+                            </span>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>
+                            <span style="font-family: Verdana,Geneva,sans-serif; color: #63ccc8;">email:&nbsp;</span>&nbsp;  
+                            <a href="mailto:lgbt.colourfully@gmail.com" id="email" style="background-color: transparent; font-family: Verdana,Geneva,sans-serif; color: #000001;" target="_blank" rel="noopener">lgbt.colourfully@gmail.com
+                            </a>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                  <td style="border-left: 3px solid #63ccc8; vertical-align: middle; padding: 0px 0px 3px 6px; font-family: Arial; border-top-color: #63ccc8; border-right-color: #63ccc8; border-bottom-color: #63ccc8;" valign="middle">
+                    <table style="line-height: 1;" border="0" cellspacing="0" cellpadding="0">
+                      <tbody>
+                        <tr>
+                          <td style="padding: 4px 0px 0px;">
+                            <a href="https://www.facebook.com/qspeakorg" style="background-color: transparent;" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://www.facebook.com/qspeakorg&amp;source=gmail&amp;ust=1624737335898000&amp;usg=AFQjCNHgumZXZS3r5qUiV327BpSJghlPWg" rel="noopener">
+                              <img style="vertical-align: middle; border-style: none; max-width: 100%; width: 22px;" src="https://ci3.googleusercontent.com/proxy/1a2TxEIx22J3nkl7nHElw2guEZXL3sGW0JjILDYIpTBAMcrFUhILk2NN2BV68pQohTU7kw4vz8I-pVLxJakWFUwXB3KRE6hTn8vu37zKC7nznbbJTOjbVIGzTHjPNcgx7Q=s0-d-e1-ft#https://img.mysignature.io/s/v3/e/f/b/efb1c8b3-afff-5ac6-b32e-73ad9e950cbd.png" alt="created with MySignature.io" width="22">
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 4px 0px 0px;">
+                            <a href="https://twitter.com/qspeakorg" style="background-color: transparent;" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://twitter.com/qspeakorg&amp;source=gmail&amp;ust=1624737335898000&amp;usg=AFQjCNGeRJBZS57wWHxjufPCMVND6q-xzw" rel="noopener">
+                              <img style="vertical-align: middle; border-style: none; max-width: 100%; width: 22px;" src="https://ci3.googleusercontent.com/proxy/PD44OiqwqGR8eRlN9-Zjj7aC6LNRZjrL6Yw1oL_Q1_uup6BZB1akbJPxOweZcHW4GphmTYmJuBmzvwts3rsGjE6MVZii54vGY_qH4u5qPd0BctLT-gH_ZO3g8g_AfTVTAg=s0-d-e1-ft#https://img.mysignature.io/s/v3/7/3/d/73dba866-0de2-5ef9-a19d-968d1e384abc.png" alt="created with MySignature.io" width="22">
+                            </a>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td style="padding: 4px 0px 0px;">
+                            <a href="https://www.instagram.com/q.speak/" style="background-color: transparent;" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://www.instagram.com/q.speak/&amp;source=gmail&amp;ust=1624737335898000&amp;usg=AFQjCNEklt4M8o1vZmHh2HF6sOSQqEYg2Q" rel="noopener">
+                              <img style="vertical-align: middle; border-style: none; max-width: 100%; width: 22px;" src="https://ci4.googleusercontent.com/proxy/IwZ4IYbHudR9lAeITyhndCG7gc6LREu_4y3eBQ6DN5lkUR7vvzRMyywYltoY1rO9AE_vtD70LUDFBO4AMXpVDTCwAFi6Zealmob923Dh5m5rwPo3E4ddsVNRW8aX162qyw=s0-d-e1-ft#https://img.mysignature.io/s/v3/0/d/a/0da8d85e-69d0-50a9-b085-b49e8c49979b.png" alt="created with MySignature.io" width="22">
+                            </a>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <table style="color: #486589; font-family: Montserrat,sans-serif; font-size: 17px;" border="0" width="500" cellspacing="0" cellpadding="0">
+      <tbody>
+        <tr>
+          <td style="font-size: 0px;" colspan="2">
+            <a href="http://www.qspeak.org/" style="background-color: transparent;" target="_blank" rel="noopener">
+              <img style="vertical-align: middle; border-style: none; max-width: 100%;" src="https://ci6.googleusercontent.com/proxy/wn6nSibJQiSGG3kI0NTl0qMjiix6otuOF5dTO-EMDw8-JhnbEIuR2Ws-eb-E16jYduunELVc-Ikbyq2iDFHIBkC8XdQHRB8HeSNgOg=s0-d-e1-ft#https://img.mysignature.io/pixel/1044632/signature/224457">
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td style="line-height: 1px;">&nbsp;</td>
+        </tr>
+      </tbody>
+    </table>
+    <br>
+  </div>
+  <div dir="ltr">
+    <em id="footer">Acknowledging that I live and work in the Dish with One Spoon Territory, the home of the Anishnaabe, Haudenosaunee and Mississaugas of the Credit.</em> 
+    <br>
+  </div>
+    </div> <br>
+</div>
+    </div>
+
+
+</body>
+</html>
