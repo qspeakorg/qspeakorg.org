@@ -1,0 +1,31 @@
+.users{
+    border: solid darkgrey;
+    border-radius: 25px;
+    margin: 1em;
+    padding: 1rem;
+}
+
+.title{
+    font-weight: bold;
+}
+
+.reviewCont{
+    font-size: 14px;
+    padding-left: 1rem;
+    padding-top: 0.25rem;
+}
+.top{
+    display: flex;
+    font-size: 12px;
+}
+.right{
+    margin-left: 2em;
+}
+
+.review{
+   padding-top: 1em; 
+}
+
+.checked {
+    color: orange;
+}
