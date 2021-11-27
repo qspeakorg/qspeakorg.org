@@ -1,8 +1,33 @@
 [
-<<<<<<< HEAD
+  {
+        "reviewer": "David Vaz",
+        "title": "They Both Die at the End",
+        "author": "Adam Silvera",
+        "finishDate": "7/18/2018",
+        "stars":5 ,
+        "rating": "13+",
+        "triggers": "Death",
+        "review": ""
+    },
+  {
+        "reviewer": "Oz",
+        "title": "Skin of The Sea",
+        "author": "Natasha Bowen",
+        "finishDate": "11/19/2021",
+        "stars": 5,
+        "rating": "13+",
+        "triggers": "death, slavery, deep sea",
+        "review": "it’s wonderful! especially if you’re a fan of mythology, this one is focused on creatures and dieties from the Ifá spiritual system, as well as some historical significance as it’s set in the mid-1400s when the Portuguese first started abducting and buying West Africans"
+    },
+  {
+        "reviewer": "Amanda",
+        "title": "Renegades",
+        "author": "Marrisa Meyer",
+        "finishDate": "11/20/2021",
+        "stars":4,
+        "rating": "13+",
+        "triggers": "injury mentions, character death",
+        "review": "Has healthy background gay relationships between the main characters dad, i think they depict a lgbt family well :) also disabled character rep with Oscar"
+    }
   
 ]
-=======
-
-]
->>>>>>> 9ad4d3aab30ba7866ccc28dcf5e48cc93771ca27
