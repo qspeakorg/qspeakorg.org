@@ -1,0 +1,1041 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+    <title>Our Calendar</title>
+    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=ABeeZee">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Abel">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Actor">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway:300,400,500">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway+Dots">
+    <link rel="stylesheet" href="assets/fonts/fontawesome-all.min.css">
+    <link rel="stylesheet" href="assets/fonts/font-awesome.min.css">
+    <link rel="stylesheet" href="assets/fonts/ionicons.min.css">
+    <link rel="stylesheet" href="assets/fonts/fontawesome5-overrides.min.css">
+    <link rel="stylesheet" href="assets/css/Accordion.css">
+    <link rel="stylesheet" href="assets/css/Articale-List-With-Image-Zoom.css">
+    <link rel="stylesheet" href="assets/css/Boostrap-Tabs.css">
+    <link rel="stylesheet" href="assets/css/Button-Outlines---Pretty.css">
+    <link rel="stylesheet" href="assets/css/Button-Ripple-Effect-Animation-Wave-Pulse.css">
+    <link rel="stylesheet" href="assets/css/Contact-Form-Clean.css">
+    <link rel="stylesheet" href="assets/css/Dark-Mode-Switch.css">
+    <link rel="stylesheet" href="assets/css/Features-Blue.css">
+    <link rel="stylesheet" href="assets/css/Features-Clean.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+    <link rel="stylesheet" href="assets/css/News-article-for-homepage-by-Ikbendiederiknl.css">
+    <link rel="stylesheet" href="assets/css/Newsletter-Subscription-Form.css">
+    <link rel="stylesheet" href="assets/css/Search-Input-Responsive-with-Icon.css">
+    <link rel="stylesheet" href="assets/css/Search-Input-responsive.css">
+    <link rel="stylesheet" href="assets/css/Social-Vertical.css">
+    <link rel="stylesheet" href="assets/css/Team-Clean.css">
+    <link rel="stylesheet" href="assets/css/Team-with-rotating-cards.css">
+    <link rel="stylesheet" href="assets/css/untitled-1.css">
+    <link rel="stylesheet" href="assets/css/untitled-2.css">
+    <link rel="stylesheet" href="assets/css/untitled.css">
+</head>
+
+<body style="background: repeating-linear-gradient(-38deg, rgb(228,117,117), rgb(222,126,84) 20%, rgb(228,214,138) 36%, rgb(190,217,146) 51%, rgb(129,180,217) 68%, rgb(98,149,227) 84%, rgb(116,80,152)), rgb(255,255,255);color: rgb(33, 37, 41);">
+    <nav class="navbar navbar-light navbar-expand-lg fixed-top" id="mainNav" style="background: #ffffff;color: rgb(33, 37, 41);border-width: 0px;">
+        <div class="container"><a href="index.html"><img src="assets/img/Black%20Logo.png" style="width: 164px;margin-left: -11px;margin-top: 3px;"></a><button data-toggle="collapse" data-target="#navbarResponsive" class="navbar-toggler" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><i class="fa fa-bars"></i></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"></li>
+                    <li class="nav-item"></li>
+                    <li class="nav-item"><a class="nav-link" data-bss-hover-animate="pulse" href="about.html" style="font-size: 16px;font-weight: normal;color: rgb(0,0,0);font-family: Actor, sans-serif;">About Us</a></li>
+                    <li class="nav-item"><a class="nav-link" data-bss-hover-animate="pulse" href="team.html" style="color: rgb(0,0,0);font-family: Actor, sans-serif;font-weight: normal;font-size: 16px;">The Team</a></li>
+                    <li class="nav-item"><a class="nav-link" data-bss-hover-animate="pulse" href="calendar.html" style="font-size: 16px;font-weight: normal;color: rgb(0,0,0);font-family: Actor, sans-serif;">Calendar</a></li>
+                    <li class="nav-item"><a class="nav-link" data-bss-hover-animate="pulse" href="contact.html" style="font-size: 16px;font-weight: normal;color: rgb(0,0,0);font-family: Actor, sans-serif;">Contact Us</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="row" style="background: rgba(166,173,155,0);margin: -12px;margin-right: -33px;margin-left: -33px;"></div>
+    </div>
+    <hr>
+    <div class="row" style="margin-top: 156px;background: #ffffff;justify-content:center;">
+
+      <nav class="product-filter">
+
+        <h1>QSpeak Prompt Library</h1>
+
+        <div class="sort">
+
+          <div class="collection-sort">
+            <label>Filter by</label><br/>
+            <label>Program:</label>
+            <select id = "program-selector" onchange = "programfilter()">
+              <option value="1">All Programs</option>
+              <option value="2">Winter 2022</option>
+              <option value="3">Fall 2021</option>
+              <option value="4">Summer 2021</option>
+              <option value="5">Spring 2021</option>
+              <option value="6">Fall 2020</option>
+              <option value="7">Summer 2020</option>
+            </select><br/>
+            <label>Part of Program:</label>
+            <select id = "time-selector" onchange = "partofprogramfilter()">
+              <option value="1">All</option>
+              <option value="2">Beginning (Weeks 1-2)</option>
+              <option value="3">Middle(Weeks 3-5)</option>
+              <option value="4">End(Weeks 6+)</option>
+            </select><br/>
+            <label>Fun Score:</label>
+            <select id = "fun-selector" onchange = "funfilter()">
+              <option value="1">All</option>
+              <option value="2">4-5</option>
+              <option value="3">2-3</option>
+            </select><br/>
+            <label>Education Score:</label>
+            <select id = "education-selector" onchange = "educationfilter()">
+              <option value="1">All</option>
+              <option value="2">4-5</option>
+              <option value="3">2-3</option>
+              <option value="4">1</option>
+            </select>
+          </div>
+
+        </div>
+
+      </nav>
+<hr>
+<div class="product-container">
+
+    <div class="product-card">
+       <img src="https://lh3.googleusercontent.com/pw/AM-JKLUyuOSDI04DzH394HUcqm9E2AGYRISCMYKOJShQ53z7meKJbqldTl12kYHnSj84bLpkQTCLNp1dapMc8rteS0UuZdfJOsvsoDFheEg4d5qictqjQaw1MUhzQnNqb2oxVtu8PBbq8O6krq4G3UCPAHk=w1600-h400-no?authuser=0" alt="Image" style="height:100px;width:300px;object-fit:cover">
+       <h3 class="product-title">Identity</h3>
+       <span class="program">Winter 2022</span> | Week <span class="weekno">1</span><br/>
+       Fun Score: <span class="fun">4</span> |
+       Education Score: <span class="education">2</span> <br/>
+       <p class="description">Discovering Your Identity and Expressing It (Or Not) to Others</p>
+       <a href="https://docs.google.com/forms/d/e/1FAIpQLSea3sayBAhrkX-DVwVDzoZdpJbDoxw5dNT7eUfJR8ihOUg8LA/viewform?usp=sf_link" target="_blank"><button>Access Prompt</button></a>
+    </div>
+
+    <div class='product-card'>
+       <img src='https://lh3.googleusercontent.com/pw/AM-JKLUyuOSDI04DzH394HUcqm9E2AGYRISCMYKOJShQ53z7meKJbqldTl12kYHnSj84bLpkQTCLNp1dapMc8rteS0UuZdfJOsvsoDFheEg4d5qictqjQaw1MUhzQnNqb2oxVtu8PBbq8O6krq4G3UCPAHk=w1600-h400-no?authuser=0' alt='Image' style='height:100px;width:300px;object-fit:cover'>
+       <h3 class='product-title'>History</h3>
+       <span class='program'>Winter 2022</span> | Week <span class='weekno'>4</span><br/>
+       Fun Score: <span class='fun'>4</span> |
+       Education Score: <span class='education'>5</span> <br/>
+       <p class='description'>History; could be gayer</p>
+       <a href='https://forms.gle/jaBQguhZU3QEBfcJ8' target='_blank'><button>Access Prompt</button></a>
+    </div>
+
+    <div class='product-card'>
+       <img src='https://lh3.googleusercontent.com/pw/AM-JKLUyuOSDI04DzH394HUcqm9E2AGYRISCMYKOJShQ53z7meKJbqldTl12kYHnSj84bLpkQTCLNp1dapMc8rteS0UuZdfJOsvsoDFheEg4d5qictqjQaw1MUhzQnNqb2oxVtu8PBbq8O6krq4G3UCPAHk=w1600-h400-no?authuser=0' alt='Image' style='height:100px;width:300px;object-fit:cover'>
+       <h3 class='product-title'>Religion/Belief</h3>
+       <span class='program'>Winter 2022</span> | Week <span class='weekno'>5</span><br/>
+       Fun Score: <span class='fun'>3</span> |
+       Education Score: <span class='education'>3</span> <br/>
+       <p class='description'>Discussion on different religious views on 2SLGBTQ+ people</p>
+       <a href='https://docs.google.com/forms/d/e/1FAIpQLSfWdBEDJJu5J5F5di0et_ZSS-rrsP9sdpdaqLJFSuNrwV_9Mw/viewform?usp=sf_link' target='_blank'><button>Access Prompt</button></a>
+    </div>
+
+    <div class='product-card'>
+       <img src='https://lh3.googleusercontent.com/pw/AM-JKLUyuOSDI04DzH394HUcqm9E2AGYRISCMYKOJShQ53z7meKJbqldTl12kYHnSj84bLpkQTCLNp1dapMc8rteS0UuZdfJOsvsoDFheEg4d5qictqjQaw1MUhzQnNqb2oxVtu8PBbq8O6krq4G3UCPAHk=w1600-h400-no?authuser=0' alt='Image' style='height:100px;width:300px;object-fit:cover'>
+       <h3 class='product-title'>Camp</h3>
+       <span class='program'>Winter 2022</span> | Week <span class='weekno'>6</span><br/>
+       Fun Score: <span class='fun'>5</span> |
+       Education Score: <span class='education'>2</span> <br/>
+       <p class='description'>A fun week discussing what the concept of ""camp"" entails</p>
+       <a href='https://forms.gle/hdwnjj5PNE3wPob1A' target='_blank'><button>Access Prompt</button></a>
+    </div>
+
+<div class='product-card'>
+       <img src='https://lh3.googleusercontent.com/pw/AM-JKLUyuOSDI04DzH394HUcqm9E2AGYRISCMYKOJShQ53z7meKJbqldTl12kYHnSj84bLpkQTCLNp1dapMc8rteS0UuZdfJOsvsoDFheEg4d5qictqjQaw1MUhzQnNqb2oxVtu8PBbq8O6krq4G3UCPAHk=w1600-h400-no?authuser=0' alt='Image' style='height:100px;width:300px;object-fit:cover'>
+       <h3 class='product-title'>Coming out</h3>
+       <span class='program'>Fall 2021</span> | Week <span class='weekno'>1</span><br/>
+       Fun Score: <span class='fun'>4</span> |
+       Education Score: <span class='education'>2</span> <br/>
+       <p class='description'>A fun activity leading to a more personal discussion on coming out and why people might choose not to.</p>
+       <a href='https://forms.gle/t3rLaewpffuuKi289' target='_blank'><button>Access Prompt</button></a>
+    </div>
+
+<div class='product-card'>
+       <img src='https://lh3.googleusercontent.com/pw/AM-JKLUyuOSDI04DzH394HUcqm9E2AGYRISCMYKOJShQ53z7meKJbqldTl12kYHnSj84bLpkQTCLNp1dapMc8rteS0UuZdfJOsvsoDFheEg4d5qictqjQaw1MUhzQnNqb2oxVtu8PBbq8O6krq4G3UCPAHk=w1600-h400-no?authuser=0' alt='Image' style='height:100px;width:300px;object-fit:cover'>
+       <h3 class='product-title'>Misinformation in media</h3>
+       <span class='program'>Fall 2021</span> | Week <span class='weekno'>2</span><br/>
+       Fun Score: <span class='fun'>3</span> |
+       Education Score: <span class='education'>3</span> <br/>
+       <p class='description'>Discussion on misinformation in 2SLGBTQ+ communities followed by a game of Gartic Phone</p>
+       <a href='https://docs.google.com/forms/d/e/1FAIpQLSffsaGnbD7hcYeihjsaKAZF567yB5yyHiKV7i7BKuYIZMu_SA/viewform?usp=sf_link' target='_blank'><button>Access Prompt</button></a>
+    </div>
+
+<div class='product-card'>
+       <img src='https://lh3.googleusercontent.com/pw/AM-JKLUyuOSDI04DzH394HUcqm9E2AGYRISCMYKOJShQ53z7meKJbqldTl12kYHnSj84bLpkQTCLNp1dapMc8rteS0UuZdfJOsvsoDFheEg4d5qictqjQaw1MUhzQnNqb2oxVtu8PBbq8O6krq4G3UCPAHk=w1600-h400-no?authuser=0' alt='Image' style='height:100px;width:300px;object-fit:cover'>
+       <h3 class='product-title'>Normalization</h3>
+       <span class='program'>Fall 2021</span> | Week <span class='weekno'>3</span><br/>
+       Fun Score: <span class='fun'>3</span> |
+       Education Score: <span class='education'>3</span> <br/>
+       <p class='description'>What is marginalization and how does it relate to normalization?</p>
+       <a href='https://docs.google.com/forms/d/e/1FAIpQLSfqWTaFnsGhsN-iAH4onkONyM7_RQnnJTQOLwfg9OxpEcWxFg/viewform?usp=sf_link' target='_blank'><button>Access Prompt</button></a>
+    </div>
+
+<div class='product-card'>
+       <img src='https://lh3.googleusercontent.com/pw/AM-JKLUyuOSDI04DzH394HUcqm9E2AGYRISCMYKOJShQ53z7meKJbqldTl12kYHnSj84bLpkQTCLNp1dapMc8rteS0UuZdfJOsvsoDFheEg4d5qictqjQaw1MUhzQnNqb2oxVtu8PBbq8O6krq4G3UCPAHk=w1600-h400-no?authuser=0' alt='Image' style='height:100px;width:300px;object-fit:cover'>
+       <h3 class='product-title'>Gender Norms</h3>
+       <span class='program'>Fall 2021</span> | Week <span class='weekno'>4</span><br/>
+       Fun Score: <span class='fun'>3</span> |
+       Education Score: <span class='education'>4</span> <br/>
+       <p class='description'>How can we combat gender norms?</p>
+       <a href='https://docs.google.com/forms/d/e/1FAIpQLSdnG98CMZF5IufasqiDpnhyhuctEThDXv0VpYoSzcv-mDCqDg/viewform?usp=sf_link' target='_blank'><button>Access Prompt</button></a>
+    </div>
+
+<div class='product-card'>
+       <img src='https://lh3.googleusercontent.com/pw/AM-JKLUyuOSDI04DzH394HUcqm9E2AGYRISCMYKOJShQ53z7meKJbqldTl12kYHnSj84bLpkQTCLNp1dapMc8rteS0UuZdfJOsvsoDFheEg4d5qictqjQaw1MUhzQnNqb2oxVtu8PBbq8O6krq4G3UCPAHk=w1600-h400-no?authuser=0' alt='Image' style='height:100px;width:300px;object-fit:cover'>
+       <h3 class='product-title'>Censorship of 2SLGBTQ+ Identities</h3>
+       <span class='program'>Fall 2021</span> | Week <span class='weekno'>5</span><br/>
+       Fun Score: <span class='fun'>3</span> |
+       Education Score: <span class='education'>3</span> <br/>
+       <p class='description'>What are the harms of media censorship of 2SLGBTQ+ identities?</p>
+       <a href='https://docs.google.com/forms/d/e/1FAIpQLScearCUZ7JxKRJ2RrDF0LGn0uKh7JsuzBjsXW8lqv_DLrejKQ/viewform?usp=sf_link' target='_blank'><button>Access Prompt</button></a>
+    </div>
+
+<div class='product-card'>
+       <img src='https://lh3.googleusercontent.com/pw/AM-JKLUyuOSDI04DzH394HUcqm9E2AGYRISCMYKOJShQ53z7meKJbqldTl12kYHnSj84bLpkQTCLNp1dapMc8rteS0UuZdfJOsvsoDFheEg4d5qictqjQaw1MUhzQnNqb2oxVtu8PBbq8O6krq4G3UCPAHk=w1600-h400-no?authuser=0' alt='Image' style='height:100px;width:300px;object-fit:cover'>
+       <h3 class='product-title'>Queer Experiences Across Cultures</h3>
+       <span class='program'>Fall 2021</span> | Week <span class='weekno'>6</span><br/>
+       Fun Score: <span class='fun'>5</span> |
+       Education Score: <span class='education'>3</span> <br/>
+       <p class='description'>A good opportunity to discuss unique experiences of queer people in different cultures. Especially if you have a diverse group of QSpeakers.</p>
+       <a href='https://docs.google.com/forms/d/e/1FAIpQLSeyyIR6ndKRw7TTh6OEw41OshFKB1cC05MdEmYS3yopUdgvoA/viewform?usp=sf_link' target='_blank'><button>Access Prompt</button></a>
+    </div>
+
+<div class='product-card'>
+       <img src='https://lh3.googleusercontent.com/pw/AM-JKLUyuOSDI04DzH394HUcqm9E2AGYRISCMYKOJShQ53z7meKJbqldTl12kYHnSj84bLpkQTCLNp1dapMc8rteS0UuZdfJOsvsoDFheEg4d5qictqjQaw1MUhzQnNqb2oxVtu8PBbq8O6krq4G3UCPAHk=w1600-h400-no?authuser=0' alt='Image' style='height:100px;width:300px;object-fit:cover'>
+       <h3 class='product-title'>New Friends</h3>
+       <span class='program'>Summer 2021</span> | Week <span class='weekno'>1</span><br/>
+       Fun Score: <span class='fun'>5</span> |
+       Education Score: <span class='education'>1</span> <br/>
+       <p class='description'>By the end of this meeting, participants should understand what QSpeak is and learn more about their other group members.</p>
+       <a href='https://docs.google.com/forms/d/e/1FAIpQLSfrS3rGL9cEeezjYsB7nyDlxmIs45gr1vJHuqlUJxRpwf2myw/viewform?usp=sf_link' target='_blank'><button>Access Prompt</button></a>
+    </div>
+
+<div class='product-card'>
+       <img src='https://lh3.googleusercontent.com/pw/AM-JKLUyuOSDI04DzH394HUcqm9E2AGYRISCMYKOJShQ53z7meKJbqldTl12kYHnSj84bLpkQTCLNp1dapMc8rteS0UuZdfJOsvsoDFheEg4d5qictqjQaw1MUhzQnNqb2oxVtu8PBbq8O6krq4G3UCPAHk=w1600-h400-no?authuser=0' alt='Image' style='height:100px;width:300px;object-fit:cover'>
+       <h3 class='product-title'>Representation</h3>
+       <span class='program'>Summer 2021</span> | Week <span class='weekno'>2</span><br/>
+       Fun Score: <span class='fun'>4</span> |
+       Education Score: <span class='education'>3</span> <br/>
+       <p class='description'>To allow QSpeakers to explore queer characters in today's media and how these characters resonate and impact them on a personal and impersonal level.</p>
+       <a href='https://docs.google.com/forms/d/e/1FAIpQLSfkstZ_e397N-VUCH84squsWdXK5wdIE16PjccAXPvMHIoyTQ/viewform?usp=sf_link' target='_blank'><button>Access Prompt</button></a>
+    </div>
+
+<div class='product-card'>
+       <img src='https://lh3.googleusercontent.com/pw/AM-JKLUyuOSDI04DzH394HUcqm9E2AGYRISCMYKOJShQ53z7meKJbqldTl12kYHnSj84bLpkQTCLNp1dapMc8rteS0UuZdfJOsvsoDFheEg4d5qictqjQaw1MUhzQnNqb2oxVtu8PBbq8O6krq4G3UCPAHk=w1600-h400-no?authuser=0' alt='Image' style='height:100px;width:300px;object-fit:cover'>
+       <h3 class='product-title'>Stereotypes</h3>
+       <span class='program'>Summer 2021</span> | Week <span class='weekno'>3</span><br/>
+       Fun Score: <span class='fun'>2</span> |
+       Education Score: <span class='education'>3</span> <br/>
+       <p class='description'>To allow QSpeakers to discuss any thoughts about stereotypes within and outside the queer community. Furthermore, they will delve into theories about the origins of stereotypes and their resulting unity or discrimination.</p>
+       <a href='https://docs.google.com/forms/d/e/1FAIpQLSffFHCrGo0xIwmTuba8h246ox24Kq_TooZWsokGoThBAPgWNQ/viewform?usp=sf_link' target='_blank'><button>Access Prompt</button></a>
+    </div>
+
+<div class='product-card'>
+       <img src='https://lh3.googleusercontent.com/pw/AM-JKLUyuOSDI04DzH394HUcqm9E2AGYRISCMYKOJShQ53z7meKJbqldTl12kYHnSj84bLpkQTCLNp1dapMc8rteS0UuZdfJOsvsoDFheEg4d5qictqjQaw1MUhzQnNqb2oxVtu8PBbq8O6krq4G3UCPAHk=w1600-h400-no?authuser=0' alt='Image' style='height:100px;width:300px;object-fit:cover'>
+       <h3 class='product-title'>Combatting comphet/compcis ideals</h3>
+       <span class='program'>Summer 2021</span> | Week <span class='weekno'>4</span><br/>
+       Fun Score: <span class='fun'>2</span> |
+       Education Score: <span class='education'>5</span> <br/>
+       <p class='description'>By the end of this meeting, QSpeakers should have an understanding of the way comphet/compcis ideals and standards affect how our societies function, and how they affect their lives.</p>
+       <a href='https://docs.google.com/forms/d/e/1FAIpQLSew-iW9WntZ6Q8Bt89GXJTmuBB3i7eDNpJkj2XANSMfatuk1g/viewform?usp=sf_link' target='_blank'><button>Access Prompt</button></a>
+    </div>
+
+<div class='product-card'>
+       <img src='https://lh3.googleusercontent.com/pw/AM-JKLUyuOSDI04DzH394HUcqm9E2AGYRISCMYKOJShQ53z7meKJbqldTl12kYHnSj84bLpkQTCLNp1dapMc8rteS0UuZdfJOsvsoDFheEg4d5qictqjQaw1MUhzQnNqb2oxVtu8PBbq8O6krq4G3UCPAHk=w1600-h400-no?authuser=0' alt='Image' style='height:100px;width:300px;object-fit:cover'>
+       <h3 class='product-title'>Gatekeeping</h3>
+       <span class='program'>Summer 2021</span> | Week <span class='weekno'>5</span><br/>
+       Fun Score: <span class='fun'>2</span> |
+       Education Score: <span class='education'>3</span> <br/>
+       <p class='description'>This meeting should give QSpeakers the chance to evaluate their understanding of gatekeeping and how the LGBTQ+ community can continue to be more inclusive.</p>
+       <a href='https://docs.google.com/forms/d/e/1FAIpQLSfJjj4X_HAhkf47oDNFs8WEL0urrlzHMvx9BHYMPJDkhheeVg/viewform?usp=sf_link' target='_blank'><button>Access Prompt</button></a>
+    </div>
+
+<div class='product-card'>
+       <img src='https://lh3.googleusercontent.com/pw/AM-JKLUyuOSDI04DzH394HUcqm9E2AGYRISCMYKOJShQ53z7meKJbqldTl12kYHnSj84bLpkQTCLNp1dapMc8rteS0UuZdfJOsvsoDFheEg4d5qictqjQaw1MUhzQnNqb2oxVtu8PBbq8O6krq4G3UCPAHk=w1600-h400-no?authuser=0' alt='Image' style='height:100px;width:300px;object-fit:cover'>
+       <h3 class='product-title'>Intersectionality</h3>
+       <span class='program'>Summer 2021</span> | Week <span class='weekno'>6</span><br/>
+       Fun Score: <span class='fun'>3</span> |
+       Education Score: <span class='education'>5</span> <br/>
+       <p class='description'>This meeting will introduce QSpeakers to the concept of intersectionality.</p>
+       <a href='https://docs.google.com/forms/d/e/1FAIpQLSfMPTI-0_Z0W3_EDhAVDinExBrEgYBYA1C1zCcNNZV4MCqEvg/viewform?usp=sf_link' target='_blank'><button>Access Prompt</button></a>
+    </div>
+
+<div class='product-card'>
+       <img src='https://lh3.googleusercontent.com/pw/AM-JKLUyuOSDI04DzH394HUcqm9E2AGYRISCMYKOJShQ53z7meKJbqldTl12kYHnSj84bLpkQTCLNp1dapMc8rteS0UuZdfJOsvsoDFheEg4d5qictqjQaw1MUhzQnNqb2oxVtu8PBbq8O6krq4G3UCPAHk=w1600-h400-no?authuser=0' alt='Image' style='height:100px;width:300px;object-fit:cover'>
+       <h3 class='product-title'>History</h3>
+       <span class='program'>Summer 2021</span> | Week <span class='weekno'>7</span><br/>
+       Fun Score: <span class='fun'>4</span> |
+       Education Score: <span class='education'>4</span> <br/>
+       <p class='description'>To give QSpeakers the opportunity to discuss and learn about the historical significance of influential queer movements and injustices in the past. QSpeakers will also consider the current standing of the LGBTQ+ community in the present, and think about what’s to come as well as their own role in shaping the future.</p>
+       <a href='https://docs.google.com/forms/d/e/1FAIpQLSdIcDa5K5_mUz3ghtCULDO3oTD17qB-plM0a5Wck8qIlP_SCw/viewform?usp=sf_link' target='_blank'><button>Access Prompt</button></a>
+    </div>
+
+<div class='product-card'>
+       <img src='https://lh3.googleusercontent.com/pw/AM-JKLUyuOSDI04DzH394HUcqm9E2AGYRISCMYKOJShQ53z7meKJbqldTl12kYHnSj84bLpkQTCLNp1dapMc8rteS0UuZdfJOsvsoDFheEg4d5qictqjQaw1MUhzQnNqb2oxVtu8PBbq8O6krq4G3UCPAHk=w1600-h400-no?authuser=0' alt='Image' style='height:100px;width:300px;object-fit:cover'>
+       <h3 class='product-title'>Community</h3>
+       <span class='program'>Summer 2021</span> | Week <span class='weekno'>8</span><br/>
+       Fun Score: <span class='fun'>5</span> |
+       Education Score: <span class='education'>2</span> <br/>
+       <p class='description'>By the end of this meeting, participants should be able to articulate one thing they’ve learned by doing the program at QSpeak. Additionally, we hope to provide them with more information about our plans for the future.</p>
+       <a href='https://docs.google.com/forms/d/e/1FAIpQLSdlftY71KnCEQYSnHIYb_NtXaGlRAu40jIbnxFD21d_OLYTQQ/viewform?usp=sf_link' target='_blank'><button>Access Prompt</button></a>
+    </div>
+
+<div class='product-card'>
+       <img src='https://lh3.googleusercontent.com/pw/AM-JKLUyuOSDI04DzH394HUcqm9E2AGYRISCMYKOJShQ53z7meKJbqldTl12kYHnSj84bLpkQTCLNp1dapMc8rteS0UuZdfJOsvsoDFheEg4d5qictqjQaw1MUhzQnNqb2oxVtu8PBbq8O6krq4G3UCPAHk=w1600-h400-no?authuser=0' alt='Image' style='height:100px;width:300px;object-fit:cover'>
+       <h3 class='product-title'>Community</h3>
+       <span class='program'>Spring 2021</span> | Week <span class='weekno'>5</span><br/>
+       Fun Score: <span class='fun'>4</span> |
+       Education Score: <span class='education'>3</span> <br/>
+       <p class='description'>To identify and explore the characteristics and impacts associated with being a part of the queer community.</p>
+       <a href='https://docs.google.com/forms/d/e/1FAIpQLScFL0uzk_T6R2U312nqqF0rOt8b9ML8NPc92O22ZMLiKNJbPA/viewform?usp=sf_link' target='_blank'><button>Access Prompt</button></a>
+    </div>
+
+<div class='product-card'>
+       <img src='https://lh3.googleusercontent.com/pw/AM-JKLUyuOSDI04DzH394HUcqm9E2AGYRISCMYKOJShQ53z7meKJbqldTl12kYHnSj84bLpkQTCLNp1dapMc8rteS0UuZdfJOsvsoDFheEg4d5qictqjQaw1MUhzQnNqb2oxVtu8PBbq8O6krq4G3UCPAHk=w1600-h400-no?authuser=0' alt='Image' style='height:100px;width:300px;object-fit:cover'>
+       <h3 class='product-title'>History</h3>
+       <span class='program'>Spring 2021</span> | Week <span class='weekno'>6</span><br/>
+       Fun Score: <span class='fun'>4</span> |
+       Education Score: <span class='education'>4</span> <br/>
+       <p class='description'>To learn about, discuss, and review key events and movements in queer history.</p>
+       <a href='https://docs.google.com/forms/d/e/1FAIpQLSfdhEY6aoV6chSKWNhzFu5ab9xzRyZvdL3OMNhAJIyeD4mrbw/viewform?usp=sf_link' target='_blank'><button>Access Prompt</button></a>
+    </div>
+
+<div class='product-card'>
+       <img src='https://lh3.googleusercontent.com/pw/AM-JKLUyuOSDI04DzH394HUcqm9E2AGYRISCMYKOJShQ53z7meKJbqldTl12kYHnSj84bLpkQTCLNp1dapMc8rteS0UuZdfJOsvsoDFheEg4d5qictqjQaw1MUhzQnNqb2oxVtu8PBbq8O6krq4G3UCPAHk=w1600-h400-no?authuser=0' alt='Image' style='height:100px;width:300px;object-fit:cover'>
+       <h3 class='product-title'>Community</h3>
+       <span class='program'>Fall 2020</span> | Week <span class='weekno'>1</span><br/>
+       Fun Score: <span class='fun'>4</span> |
+       Education Score: <span class='education'>3</span> <br/>
+       <p class='description'>Introduce everyone to their groups by discussing the community's people are a part of</p>
+       <a href='Week 1: Community - Google Docs' target='_blank'><button>Access Prompt</button></a>
+    </div>
+
+<div class='product-card'>
+       <img src='https://lh3.googleusercontent.com/pw/AM-JKLUyuOSDI04DzH394HUcqm9E2AGYRISCMYKOJShQ53z7meKJbqldTl12kYHnSj84bLpkQTCLNp1dapMc8rteS0UuZdfJOsvsoDFheEg4d5qictqjQaw1MUhzQnNqb2oxVtu8PBbq8O6krq4G3UCPAHk=w1600-h400-no?authuser=0' alt='Image' style='height:100px;width:300px;object-fit:cover'>
+       <h3 class='product-title'>Representation</h3>
+       <span class='program'>Fall 2020</span> | Week <span class='weekno'>2</span><br/>
+       Fun Score: <span class='fun'>5</span> |
+       Education Score: <span class='education'>2</span> <br/>
+       <p class='description'>Discussion on examples of representation and how it affects the community</p>
+       <a href='Week 2: LGBTQ+ Representation - Google Docs' target='_blank'><button>Access Prompt</button></a>
+    </div>
+
+<div class='product-card'>
+       <img src='https://lh3.googleusercontent.com/pw/AM-JKLUyuOSDI04DzH394HUcqm9E2AGYRISCMYKOJShQ53z7meKJbqldTl12kYHnSj84bLpkQTCLNp1dapMc8rteS0UuZdfJOsvsoDFheEg4d5qictqjQaw1MUhzQnNqb2oxVtu8PBbq8O6krq4G3UCPAHk=w1600-h400-no?authuser=0' alt='Image' style='height:100px;width:300px;object-fit:cover'>
+       <h3 class='product-title'>Intersectionality</h3>
+       <span class='program'>Fall 2020</span> | Week <span class='weekno'>3</span><br/>
+       Fun Score: <span class='fun'>4</span> |
+       Education Score: <span class='education'>5</span> <br/>
+       <p class='description'>Discussion on oppression followed by a ""walk the line"" activity related to privilege</p>
+       <a href='Week 3: Intersectionality - Google Docs' target='_blank'><button>Access Prompt</button></a>
+    </div>
+
+<div class='product-card'>
+       <img src='https://lh3.googleusercontent.com/pw/AM-JKLUyuOSDI04DzH394HUcqm9E2AGYRISCMYKOJShQ53z7meKJbqldTl12kYHnSj84bLpkQTCLNp1dapMc8rteS0UuZdfJOsvsoDFheEg4d5qictqjQaw1MUhzQnNqb2oxVtu8PBbq8O6krq4G3UCPAHk=w1600-h400-no?authuser=0' alt='Image' style='height:100px;width:300px;object-fit:cover'>
+       <h3 class='product-title'>Self-Acceptance/Coming Out</h3>
+       <span class='program'>Fall 2020</span> | Week <span class='weekno'>4</span><br/>
+       Fun Score: <span class='fun'>3</span> |
+       Education Score: <span class='education'>2</span> <br/>
+       <p class='description'>Discussion on self-expression, related to coming out</p>
+       <a href='Week 4: Self-Acceptance/Coming Out - Google Docs' target='_blank'><button>Access Prompt</button></a>
+    </div>
+
+<div class='product-card'>
+       <img src='https://lh3.googleusercontent.com/pw/AM-JKLUyuOSDI04DzH394HUcqm9E2AGYRISCMYKOJShQ53z7meKJbqldTl12kYHnSj84bLpkQTCLNp1dapMc8rteS0UuZdfJOsvsoDFheEg4d5qictqjQaw1MUhzQnNqb2oxVtu8PBbq8O6krq4G3UCPAHk=w1600-h400-no?authuser=0' alt='Image' style='height:100px;width:300px;object-fit:cover'>
+       <h3 class='product-title'>Relationships</h3>
+       <span class='program'>Fall 2020</span> | Week <span class='weekno'>5</span><br/>
+       Fun Score: <span class='fun'>4</span> |
+       Education Score: <span class='education'>3</span> <br/>
+       <p class='description'>What makes a healthy relationship?</p>
+       <a href='Week 5: Relationships - Google Docs' target='_blank'><button>Access Prompt</button></a>
+    </div>
+
+<div class='product-card'>
+       <img src='https://lh3.googleusercontent.com/pw/AM-JKLUyuOSDI04DzH394HUcqm9E2AGYRISCMYKOJShQ53z7meKJbqldTl12kYHnSj84bLpkQTCLNp1dapMc8rteS0UuZdfJOsvsoDFheEg4d5qictqjQaw1MUhzQnNqb2oxVtu8PBbq8O6krq4G3UCPAHk=w1600-h400-no?authuser=0' alt='Image' style='height:100px;width:300px;object-fit:cover'>
+       <h3 class='product-title'>Adversity and advocacy</h3>
+       <span class='program'>Fall 2020</span> | Week <span class='weekno'>6</span><br/>
+       Fun Score: <span class='fun'>3</span> |
+       Education Score: <span class='education'>4</span> <br/>
+       <p class='description'>In what ways can you advocate for the 2SLGBTQ+ community</p>
+       <a href='Week 7: Adversity and Advocacy - Google Docs' target='_blank'><button>Access Prompt</button></a>
+    </div>
+
+<div class='product-card'>
+       <img src='https://lh3.googleusercontent.com/pw/AM-JKLUyuOSDI04DzH394HUcqm9E2AGYRISCMYKOJShQ53z7meKJbqldTl12kYHnSj84bLpkQTCLNp1dapMc8rteS0UuZdfJOsvsoDFheEg4d5qictqjQaw1MUhzQnNqb2oxVtu8PBbq8O6krq4G3UCPAHk=w1600-h400-no?authuser=0' alt='Image' style='height:100px;width:300px;object-fit:cover'>
+       <h3 class='product-title'>Saying Goodbye</h3>
+       <span class='program'>Fall 2020</span> | Week <span class='weekno'>7</span><br/>
+       Fun Score: <span class='fun'>5</span> |
+       Education Score: <span class='education'>1</span> <br/>
+       <p class='description'>A good prompt to end off the program</p>
+       <a href='Week 7: Saying Goodbye - Google Docs' target='_blank'><button>Access Prompt</button></a>
+    </div>
+
+<div class='product-card'>
+       <img src='https://lh3.googleusercontent.com/pw/AM-JKLUyuOSDI04DzH394HUcqm9E2AGYRISCMYKOJShQ53z7meKJbqldTl12kYHnSj84bLpkQTCLNp1dapMc8rteS0UuZdfJOsvsoDFheEg4d5qictqjQaw1MUhzQnNqb2oxVtu8PBbq8O6krq4G3UCPAHk=w1600-h400-no?authuser=0' alt='Image' style='height:100px;width:300px;object-fit:cover'>
+       <h3 class='product-title'>Getting to know you</h3>
+       <span class='program'>Summer 2020</span> | Week <span class='weekno'>1</span><br/>
+       Fun Score: <span class='fun'>4</span> |
+       Education Score: <span class='education'>2</span> <br/>
+       <p class='description'>Single-question prompt</p>
+       <a href='OFFICIAL Secondary School Summer Program Draft - Google Docs' target='_blank'><button>Access Prompt</button></a>
+    </div>
+
+<div class='product-card'>
+       <img src='https://lh3.googleusercontent.com/pw/AM-JKLUyuOSDI04DzH394HUcqm9E2AGYRISCMYKOJShQ53z7meKJbqldTl12kYHnSj84bLpkQTCLNp1dapMc8rteS0UuZdfJOsvsoDFheEg4d5qictqjQaw1MUhzQnNqb2oxVtu8PBbq8O6krq4G3UCPAHk=w1600-h400-no?authuser=0' alt='Image' style='height:100px;width:300px;object-fit:cover'>
+       <h3 class='product-title'>Most treasured memory</h3>
+       <span class='program'>Summer 2020</span> | Week <span class='weekno'>2</span><br/>
+       Fun Score: <span class='fun'>4</span> |
+       Education Score: <span class='education'>2</span> <br/>
+       <p class='description'>Single-question prompt</p>
+       <a href='OFFICIAL Secondary School Summer Program Draft - Google Docs' target='_blank'><button>Access Prompt</button></a>
+    </div>
+
+<div class='product-card'>
+       <img src='https://lh3.googleusercontent.com/pw/AM-JKLUyuOSDI04DzH394HUcqm9E2AGYRISCMYKOJShQ53z7meKJbqldTl12kYHnSj84bLpkQTCLNp1dapMc8rteS0UuZdfJOsvsoDFheEg4d5qictqjQaw1MUhzQnNqb2oxVtu8PBbq8O6krq4G3UCPAHk=w1600-h400-no?authuser=0' alt='Image' style='height:100px;width:300px;object-fit:cover'>
+       <h3 class='product-title'>LGBTQ Icon</h3>
+       <span class='program'>Summer 2020</span> | Week <span class='weekno'>3</span><br/>
+       Fun Score: <span class='fun'>4</span> |
+       Education Score: <span class='education'>2</span> <br/>
+       <p class='description'>Single-question prompt</p>
+       <a href='OFFICIAL Secondary School Summer Program Draft - Google Docs' target='_blank'><button>Access Prompt</button></a>
+    </div>
+
+<div class='product-card'>
+       <img src='https://lh3.googleusercontent.com/pw/AM-JKLUyuOSDI04DzH394HUcqm9E2AGYRISCMYKOJShQ53z7meKJbqldTl12kYHnSj84bLpkQTCLNp1dapMc8rteS0UuZdfJOsvsoDFheEg4d5qictqjQaw1MUhzQnNqb2oxVtu8PBbq8O6krq4G3UCPAHk=w1600-h400-no?authuser=0' alt='Image' style='height:100px;width:300px;object-fit:cover'>
+       <h3 class='product-title'>Fitting in</h3>
+       <span class='program'>Summer 2020</span> | Week <span class='weekno'>4</span><br/>
+       Fun Score: <span class='fun'>3</span> |
+       Education Score: <span class='education'>3</span> <br/>
+       <p class='description'>Single-question prompt</p>
+       <a href='OFFICIAL Secondary School Summer Program Draft - Google Docs' target='_blank'><button>Access Prompt</button></a>
+    </div>
+
+<div class='product-card'>
+       <img src='https://lh3.googleusercontent.com/pw/AM-JKLUyuOSDI04DzH394HUcqm9E2AGYRISCMYKOJShQ53z7meKJbqldTl12kYHnSj84bLpkQTCLNp1dapMc8rteS0UuZdfJOsvsoDFheEg4d5qictqjQaw1MUhzQnNqb2oxVtu8PBbq8O6krq4G3UCPAHk=w1600-h400-no?authuser=0' alt='Image' style='height:100px;width:300px;object-fit:cover'>
+       <h3 class='product-title'>3 wishes</h3>
+       <span class='program'>Summer 2020</span> | Week <span class='weekno'>5</span><br/>
+       Fun Score: <span class='fun'>4</span> |
+       Education Score: <span class='education'>3</span> <br/>
+       <p class='description'>Single-question prompt</p>
+       <a href='OFFICIAL Secondary School Summer Program Draft - Google Docs' target='_blank'><button>Access Prompt</button></a>
+    </div>
+
+<div class='product-card'>
+       <img src='https://lh3.googleusercontent.com/pw/AM-JKLUyuOSDI04DzH394HUcqm9E2AGYRISCMYKOJShQ53z7meKJbqldTl12kYHnSj84bLpkQTCLNp1dapMc8rteS0UuZdfJOsvsoDFheEg4d5qictqjQaw1MUhzQnNqb2oxVtu8PBbq8O6krq4G3UCPAHk=w1600-h400-no?authuser=0' alt='Image' style='height:100px;width:300px;object-fit:cover'>
+       <h3 class='product-title'>Community</h3>
+       <span class='program'>Summer 2020</span> | Week <span class='weekno'>6</span><br/>
+       Fun Score: <span class='fun'>4</span> |
+       Education Score: <span class='education'>3</span> <br/>
+       <p class='description'>Single-question prompt</p>
+       <a href='OFFICIAL Secondary School Summer Program Draft - Google Docs' target='_blank'><button>Access Prompt</button></a>
+    </div>
+
+<div class='product-card'>
+       <img src='https://lh3.googleusercontent.com/pw/AM-JKLUyuOSDI04DzH394HUcqm9E2AGYRISCMYKOJShQ53z7meKJbqldTl12kYHnSj84bLpkQTCLNp1dapMc8rteS0UuZdfJOsvsoDFheEg4d5qictqjQaw1MUhzQnNqb2oxVtu8PBbq8O6krq4G3UCPAHk=w1600-h400-no?authuser=0' alt='Image' style='height:100px;width:300px;object-fit:cover'>
+       <h3 class='product-title'>Coming out</h3>
+       <span class='program'>Summer 2020</span> | Week <span class='weekno'>7</span><br/>
+       Fun Score: <span class='fun'>3</span> |
+       Education Score: <span class='education'>3</span> <br/>
+       <p class='description'>Single-question prompt</p>
+       <a href='OFFICIAL Secondary School Summer Program Draft - Google Docs' target='_blank'><button>Access Prompt</button></a>
+    </div>
+
+<div class='product-card'>
+       <img src='https://lh3.googleusercontent.com/pw/AM-JKLUyuOSDI04DzH394HUcqm9E2AGYRISCMYKOJShQ53z7meKJbqldTl12kYHnSj84bLpkQTCLNp1dapMc8rteS0UuZdfJOsvsoDFheEg4d5qictqjQaw1MUhzQnNqb2oxVtu8PBbq8O6krq4G3UCPAHk=w1600-h400-no?authuser=0' alt='Image' style='height:100px;width:300px;object-fit:cover'>
+       <h3 class='product-title'>Getting to know you 2</h3>
+       <span class='program'>Summer 2020</span> | Week <span class='weekno'>8</span><br/>
+       Fun Score: <span class='fun'>4</span> |
+       Education Score: <span class='education'>1</span> <br/>
+       <p class='description'>Single-question prompt</p>
+       <a href='OFFICIAL Secondary School Summer Program Draft - Google Docs' target='_blank'><button>Access Prompt</button></a>
+    </div>
+
+<div class='product-card'>
+       <img src='https://lh3.googleusercontent.com/pw/AM-JKLUyuOSDI04DzH394HUcqm9E2AGYRISCMYKOJShQ53z7meKJbqldTl12kYHnSj84bLpkQTCLNp1dapMc8rteS0UuZdfJOsvsoDFheEg4d5qictqjQaw1MUhzQnNqb2oxVtu8PBbq8O6krq4G3UCPAHk=w1600-h400-no?authuser=0' alt='Image' style='height:100px;width:300px;object-fit:cover'>
+       <h3 class='product-title'>Impressions</h3>
+       <span class='program'>Summer 2020</span> | Week <span class='weekno'>9</span><br/>
+       Fun Score: <span class='fun'>4</span> |
+       Education Score: <span class='education'>2</span> <br/>
+       <p class='description'>Single-question prompt</p>
+       <a href='OFFICIAL Secondary School Summer Program Draft - Google Docs' target='_blank'><button>Access Prompt</button></a>
+    </div>
+
+</div>
+
+    </div>
+    <footer>
+        <div class="card"></div>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-10 col-lg-6 offset-lg-5 mx-auto">
+                    <ul class="list-inline text-center">
+                        <li class="list-inline-item"><span class="fa-stack fa-lg"><a href="https://discord.gg/2BY3v9R7EQ" style="color: rgba(255,255,255,0);"><i class="fa fa-circle fa-stack-2x" style="color: rgba(3,2,2,0.83);"></i><i class="fab fa-discord fa-stack-1x fa-inverse"></i>Link</a></span></li>
+                        <li class="list-inline-item"><span class="fa-stack fa-lg"><a href="https://www.facebook.com/qspeakorg" style="color: rgba(255,255,255,0);"><i class="fa fa-circle fa-stack-2x" style="color: rgba(3,2,2,0.83);"></i><i class="icon ion-social-facebook fa-stack-1x fa-inverse"></i>Link</a></span></li>
+                        <li class="list-inline-item"><span class="fa-stack fa-lg"><a href="https://www.instagram.com/q.speak/" style="color: rgba(255,255,255,0);"><i class="fa fa-circle fa-stack-2x" style="color: rgba(3,2,2,0.83);"></i><i class="fa fa-instagram fa-stack-1x fa-inverse"></i>Link</a></span></li>
+                    </ul>
+                    <p class="text-muted copyright" style="color: rgb(255,255,255);margin-bottom: -29px;font-size: 10px;">Made with ❤️🧡💛💚💙💜 by Jay and Angela</p>
+                    <p class="text-muted copyright" style="color: rgb(255,255,255);">Copyright&nbsp;©&nbsp;2021 QSpeak, All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+      var prompts = Array.from(document.getElementsByClassName("product-card"));
+      var programs = document.getElementsByClassName("program");
+      var weeknumber = document.getElementsByClassName("weekno");
+      var funscore = document.getElementsByClassName("fun");
+      var educationscore = document.getElementsByClassName("education");
+
+
+
+      var lastselected = "none"
+
+      function programfilter() {
+        var program_value = document.getElementById("program-selector").value;
+
+        if(program_value == 1){
+          for(var i of Array(prompts.length).fill().map((element, index) => index + 0)){
+            prompts[i].hidden = false;
+          }
+        }
+
+        if(program_value == 2){
+          for(var i of Array(prompts.length).fill().map((element, index) => index + 0)){
+            prompts[i].hidden = false;
+            if(programs[i].innerHTML != "Winter 2022"){
+              prompts[i].hidden = true;
+            }
+          }
+        }
+
+        if(program_value == 3){
+          for(var i of Array(prompts.length).fill().map((element, index) => index + 0)){
+            prompts[i].hidden = false;
+            if(programs[i].innerHTML != "Fall 2021"){
+              prompts[i].hidden = true;
+            }
+          }
+        }
+
+        if(program_value == 4){
+          for(var i of Array(prompts.length).fill().map((element, index) => index + 0)){
+            prompts[i].hidden = false;
+            if(programs[i].innerHTML != "Summer 2021"){
+              prompts[i].hidden = true;
+            }
+          }
+        }
+
+        if(program_value == 5){
+          for(var i of Array(prompts.length).fill().map((element, index) => index + 0)){
+            prompts[i].hidden = false;
+            if(programs[i].innerHTML != "Spring 2021"){
+              prompts[i].hidden = true;
+            }
+          }
+        }
+
+        if(program_value == 6){
+          for(var i of Array(prompts.length).fill().map((element, index) => index + 0)){
+            prompts[i].hidden = false;
+            if(programs[i].innerHTML != "Fall 2020"){
+              prompts[i].hidden = true;
+            }
+          }
+        }
+
+        if(program_value == 7){
+          for(var i of Array(prompts.length).fill().map((element, index) => index + 0)){
+            prompts[i].hidden = false;
+            if(programs[i].innerHTML != "Summer 2020"){
+              prompts[i].hidden = true;
+            }
+          }
+        }
+
+        var partofprogram_value = document.getElementById("time-selector").value;
+
+        if(partofprogram_value == 2){
+          for(var i of Array(prompts.length).fill().map((element, index) => index + 0)){
+            if((weeknumber[i].innerHTML != "1") & (weeknumber[i].innerHTML != "2")){
+              prompts[i].hidden = true;
+            }
+          }
+        }
+
+        if(partofprogram_value == 3){
+          for(var i of Array(prompts.length).fill().map((element, index) => index + 0)){
+            if((weeknumber[i].innerHTML != "3") & (weeknumber[i].innerHTML != "4") & (weeknumber[i].innerHTML != "5")){
+              prompts[i].hidden = true;
+            }
+          }
+        }
+
+        if(partofprogram_value == 4){
+          for(var i of Array(prompts.length).fill().map((element, index) => index + 0)){
+            if((weeknumber[i].innerHTML != "6") & (weeknumber[i].innerHTML != "7") & (weeknumber[i].innerHTML != "8") & (weeknumber[i].innerHTML != "9") & (weeknumber[i].innerHTML != "10")){
+              prompts[i].hidden = true;
+            }
+          }
+        }
+
+        var fun_value = document.getElementById("fun-selector").value;
+
+        if(fun_value == 2){
+          for(var i of Array(prompts.length).fill().map((element, index) => index + 0)){
+            if((funscore[i].innerHTML != "5") & (funscore[i].innerHTML != "4")){
+              prompts[i].hidden = true;
+            }
+          }
+        }
+
+        if(fun_value == 3){
+          for(var i of Array(prompts.length).fill().map((element, index) => index + 0)){
+            if((funscore[i].innerHTML != "2") & (funscore[i].innerHTML != "3")){
+              prompts[i].hidden = true;
+            }
+          }
+        }
+
+        var education_value = document.getElementById("education-selector").value;
+
+
+        if(education_value == 2){
+          for(var i of Array(prompts.length).fill().map((element, index) => index + 0)){
+            if((educationscore[i].innerHTML != "5") & (educationscore[i].innerHTML != "4")){
+              prompts[i].hidden = true;
+            }
+          }
+        }
+
+        if(education_value == 3){
+          for(var i of Array(prompts.length).fill().map((element, index) => index + 0)){
+            if((educationscore[i].innerHTML != "2") & (educationscore[i].innerHTML != "3")){
+              prompts[i].hidden = true;
+            }
+          }
+        }
+
+        if(education_value == 4){
+          for(var i of Array(prompts.length).fill().map((element, index) => index + 0)){
+            prompts[i].hidden = false;
+            if(educationscore[i].innerHTML != "1"){
+              prompts[i].hidden = true;
+            }
+          }
+        }
+
+      }
+
+      function partofprogramfilter() {
+        var partofprogram_value = document.getElementById("time-selector").value;
+
+        if(partofprogram_value == 1){
+          for(var i of Array(prompts.length).fill().map((element, index) => index + 0)){
+            prompts[i].hidden = false;
+          }
+        }
+
+        if(partofprogram_value == 2){
+          for(var i of Array(prompts.length).fill().map((element, index) => index + 0)){
+            prompts[i].hidden = false;
+            if((weeknumber[i].innerHTML != "1") & (weeknumber[i].innerHTML != "2")){
+              prompts[i].hidden = true;
+            }
+          }
+        }
+
+        if(partofprogram_value == 3){
+          for(var i of Array(prompts.length).fill().map((element, index) => index + 0)){
+            prompts[i].hidden = false;
+            if((weeknumber[i].innerHTML != "3") & (weeknumber[i].innerHTML != "4") & (weeknumber[i].innerHTML != "5")){
+              prompts[i].hidden = true;
+            }
+          }
+        }
+
+        if(partofprogram_value == 4){
+          for(var i of Array(prompts.length).fill().map((element, index) => index + 0)){
+            prompts[i].hidden = false;
+            if((weeknumber[i].innerHTML != "6") & (weeknumber[i].innerHTML != "7") & (weeknumber[i].innerHTML != "8") & (weeknumber[i].innerHTML != "9") & (weeknumber[i].innerHTML != "10")){
+              prompts[i].hidden = true;
+            }
+          }
+        }
+
+        var program_value = document.getElementById("program-selector").value;
+
+        if(program_value == 2){
+          for(var i of Array(prompts.length).fill().map((element, index) => index + 0)){
+            if(programs[i].innerHTML != "Winter 2022"){
+              prompts[i].hidden = true;
+            }
+          }
+        }
+
+        if(program_value == 3){
+          for(var i of Array(prompts.length).fill().map((element, index) => index + 0)){
+            if(programs[i].innerHTML != "Fall 2021"){
+              prompts[i].hidden = true;
+            }
+          }
+        }
+
+        if(program_value == 4){
+          for(var i of Array(prompts.length).fill().map((element, index) => index + 0)){
+            if(programs[i].innerHTML != "Summer 2021"){
+              prompts[i].hidden = true;
+            }
+          }
+        }
+
+        if(program_value == 5){
+          for(var i of Array(prompts.length).fill().map((element, index) => index + 0)){
+            if(programs[i].innerHTML != "Spring 2021"){
+              prompts[i].hidden = true;
+            }
+          }
+        }
+
+        if(program_value == 6){
+          for(var i of Array(prompts.length).fill().map((element, index) => index + 0)){
+            if(programs[i].innerHTML != "Fall 2020"){
+              prompts[i].hidden = true;
+            }
+          }
+        }
+
+        if(program_value == 7){
+          for(var i of Array(prompts.length).fill().map((element, index) => index + 0)){
+            if(programs[i].innerHTML != "Summer 2020"){
+              prompts[i].hidden = true;
+            }
+          }
+        }
+
+        var fun_value = document.getElementById("fun-selector").value;
+
+        if(fun_value == 2){
+          for(var i of Array(prompts.length).fill().map((element, index) => index + 0)){
+            if((funscore[i].innerHTML != "5") & (funscore[i].innerHTML != "4")){
+              prompts[i].hidden = true;
+            }
+          }
+        }
+
+        if(fun_value == 3){
+          for(var i of Array(prompts.length).fill().map((element, index) => index + 0)){
+            if((funscore[i].innerHTML != "2") & (funscore[i].innerHTML != "3")){
+              prompts[i].hidden = true;
+            }
+          }
+        }
+
+        var education_value = document.getElementById("education-selector").value;
+
+        if(education_value == 2){
+          for(var i of Array(prompts.length).fill().map((element, index) => index + 0)){
+            if((educationscore[i].innerHTML != "5") & (educationscore[i].innerHTML != "4")){
+              prompts[i].hidden = true;
+            }
+          }
+        }
+
+        if(education_value == 3){
+          for(var i of Array(prompts.length).fill().map((element, index) => index + 0)){
+            if((educationscore[i].innerHTML != "2") & (educationscore[i].innerHTML != "3")){
+              prompts[i].hidden = true;
+            }
+          }
+        }
+
+        if(education_value == 4){
+          for(var i of Array(prompts.length).fill().map((element, index) => index + 0)){
+            if(educationscore[i].innerHTML != "1"){
+              prompts[i].hidden = true;
+            }
+          }
+        }
+
+      }
+
+      function funfilter() {
+        var fun_value = document.getElementById("fun-selector").value;
+
+        if(fun_value == 1){
+          for(var i of Array(prompts.length).fill().map((element, index) => index + 0)){
+            prompts[i].hidden = false;
+          }
+        }
+
+        if(fun_value == 2){
+          for(var i of Array(prompts.length).fill().map((element, index) => index + 0)){
+            prompts[i].hidden = false;
+            if((funscore[i].innerHTML != "5") & (funscore[i].innerHTML != "4")){
+              prompts[i].hidden = true;
+            }
+          }
+        }
+
+        if(fun_value == 3){
+          for(var i of Array(prompts.length).fill().map((element, index) => index + 0)){
+            prompts[i].hidden = false;
+            if((funscore[i].innerHTML != "2") & (funscore[i].innerHTML != "3")){
+              prompts[i].hidden = true;
+            }
+          }
+        }
+
+        var program_value = document.getElementById("program-selector").value;
+
+        if(program_value == 2){
+          for(var i of Array(prompts.length).fill().map((element, index) => index + 0)){
+            if(programs[i].innerHTML != "Winter 2022"){
+              prompts[i].hidden = true;
+            }
+          }
+        }
+
+        if(program_value == 3){
+          for(var i of Array(prompts.length).fill().map((element, index) => index + 0)){
+            if(programs[i].innerHTML != "Fall 2021"){
+              prompts[i].hidden = true;
+            }
+          }
+        }
+
+        if(program_value == 4){
+          for(var i of Array(prompts.length).fill().map((element, index) => index + 0)){
+            if(programs[i].innerHTML != "Summer 2021"){
+              prompts[i].hidden = true;
+            }
+          }
+        }
+
+        if(program_value == 5){
+          for(var i of Array(prompts.length).fill().map((element, index) => index + 0)){
+            if(programs[i].innerHTML != "Spring 2021"){
+              prompts[i].hidden = true;
+            }
+          }
+        }
+
+        if(program_value == 6){
+          for(var i of Array(prompts.length).fill().map((element, index) => index + 0)){
+            if(programs[i].innerHTML != "Fall 2020"){
+              prompts[i].hidden = true;
+            }
+          }
+        }
+
+        if(program_value == 7){
+          for(var i of Array(prompts.length).fill().map((element, index) => index + 0)){
+            if(programs[i].innerHTML != "Summer 2020"){
+              prompts[i].hidden = true;
+            }
+          }
+        }
+
+        var partofprogram_value = document.getElementById("time-selector").value;
+
+        if(partofprogram_value == 2){
+          for(var i of Array(prompts.length).fill().map((element, index) => index + 0)){
+            if((weeknumber[i].innerHTML != "1") & (weeknumber[i].innerHTML != "2")){
+              prompts[i].hidden = true;
+            }
+          }
+        }
+
+        if(partofprogram_value == 3){
+          for(var i of Array(prompts.length).fill().map((element, index) => index + 0)){
+            if((weeknumber[i].innerHTML != "3") & (weeknumber[i].innerHTML != "4") & (weeknumber[i].innerHTML != "5")){
+              prompts[i].hidden = true;
+            }
+          }
+        }
+
+        if(partofprogram_value == 4){
+          for(var i of Array(prompts.length).fill().map((element, index) => index + 0)){
+            if((weeknumber[i].innerHTML != "6") & (weeknumber[i].innerHTML != "7") & (weeknumber[i].innerHTML != "8") & (weeknumber[i].innerHTML != "9") & (weeknumber[i].innerHTML != "10")){
+              prompts[i].hidden = true;
+            }
+          }
+        }
+
+        var education_value = document.getElementById("education-selector").value;
+
+        if(education_value == 2){
+          for(var i of Array(prompts.length).fill().map((element, index) => index + 0)){
+            if((educationscore[i].innerHTML != "5") & (educationscore[i].innerHTML != "4")){
+              prompts[i].hidden = true;
+            }
+          }
+        }
+
+        if(education_value == 3){
+          for(var i of Array(prompts.length).fill().map((element, index) => index + 0)){
+            if((educationscore[i].innerHTML != "2") & (educationscore[i].innerHTML != "3")){
+              prompts[i].hidden = true;
+            }
+          }
+        }
+
+        if(education_value == 4){
+          for(var i of Array(prompts.length).fill().map((element, index) => index + 0)){
+            if(educationscore[i].innerHTML != "1"){
+              prompts[i].hidden = true;
+            }
+          }
+        }
+
+      }
+
+      function educationfilter() {
+        var education_value = document.getElementById("education-selector").value;
+
+        if(education_value == 1){
+          for(var i of Array(prompts.length).fill().map((element, index) => index + 0)){
+            prompts[i].hidden = false;
+          }
+        }
+
+        if(education_value == 2){
+          for(var i of Array(prompts.length).fill().map((element, index) => index + 0)){
+            prompts[i].hidden = false;
+            if((educationscore[i].innerHTML != "5") & (educationscore[i].innerHTML != "4")){
+              prompts[i].hidden = true;
+            }
+          }
+        }
+
+        if(education_value == 3){
+          for(var i of Array(prompts.length).fill().map((element, index) => index + 0)){
+            prompts[i].hidden = false;
+            if((educationscore[i].innerHTML != "2") & (educationscore[i].innerHTML != "3")){
+              prompts[i].hidden = true;
+            }
+          }
+        }
+
+        if(education_value == 4){
+          for(var i of Array(prompts.length).fill().map((element, index) => index + 0)){
+            prompts[i].hidden = false;
+            if(educationscore[i].innerHTML != "1"){
+              prompts[i].hidden = true;
+            }
+          }
+        }
+
+        var program_value = document.getElementById("program-selector").value;
+
+        if(program_value == 2){
+          for(var i of Array(prompts.length).fill().map((element, index) => index + 0)){
+            if(programs[i].innerHTML != "Winter 2022"){
+              prompts[i].hidden = true;
+            }
+          }
+        }
+
+        if(program_value == 3){
+          for(var i of Array(prompts.length).fill().map((element, index) => index + 0)){
+            if(programs[i].innerHTML != "Fall 2021"){
+              prompts[i].hidden = true;
+            }
+          }
+        }
+
+        if(program_value == 4){
+          for(var i of Array(prompts.length).fill().map((element, index) => index + 0)){
+            if(programs[i].innerHTML != "Summer 2021"){
+              prompts[i].hidden = true;
+            }
+          }
+        }
+
+        if(program_value == 5){
+          for(var i of Array(prompts.length).fill().map((element, index) => index + 0)){
+            if(programs[i].innerHTML != "Spring 2021"){
+              prompts[i].hidden = true;
+            }
+          }
+        }
+
+        if(program_value == 6){
+          for(var i of Array(prompts.length).fill().map((element, index) => index + 0)){
+            if(programs[i].innerHTML != "Fall 2020"){
+              prompts[i].hidden = true;
+            }
+          }
+        }
+
+        if(program_value == 7){
+          for(var i of Array(prompts.length).fill().map((element, index) => index + 0)){
+            if(programs[i].innerHTML != "Summer 2020"){
+              prompts[i].hidden = true;
+            }
+          }
+        }
+
+        var partofprogram_value = document.getElementById("time-selector").value;
+
+        if(partofprogram_value == 2){
+          for(var i of Array(prompts.length).fill().map((element, index) => index + 0)){
+            if((weeknumber[i].innerHTML != "1") & (weeknumber[i].innerHTML != "2")){
+              prompts[i].hidden = true;
+            }
+          }
+        }
+
+        if(partofprogram_value == 3){
+          for(var i of Array(prompts.length).fill().map((element, index) => index + 0)){
+            if((weeknumber[i].innerHTML != "3") & (weeknumber[i].innerHTML != "4") & (weeknumber[i].innerHTML != "5")){
+              prompts[i].hidden = true;
+            }
+          }
+        }
+
+        if(partofprogram_value == 4){
+          for(var i of Array(prompts.length).fill().map((element, index) => index + 0)){
+            if((weeknumber[i].innerHTML != "6") & (weeknumber[i].innerHTML != "7") & (weeknumber[i].innerHTML != "8") & (weeknumber[i].innerHTML != "9") & (weeknumber[i].innerHTML != "10")){
+              prompts[i].hidden = true;
+            }
+          }
+        }
+
+        var fun_value = document.getElementById("fun-selector").value;
+
+        if(fun_value == 2){
+          for(var i of Array(prompts.length).fill().map((element, index) => index + 0)){
+            if((funscore[i].innerHTML != "5") & (funscore[i].innerHTML != "4")){
+              prompts[i].hidden = true;
+            }
+          }
+        }
+
+        if(fun_value == 3){
+          for(var i of Array(prompts.length).fill().map((element, index) => index + 0)){
+            if((funscore[i].innerHTML != "2") & (funscore[i].innerHTML != "3")){
+              prompts[i].hidden = true;
+            }
+          }
+        }
+
+      }
+
+    </script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/bootstrap/js/bootstrap.min.js"></script>
+    <script src="assets/js/smart-forms.min.js"></script>
+    <script src="assets/js/bs-init.js"></script>
+    <script src="assets/js/Button-Ripple-Effect-Animation-Wave-Pulse.js"></script>
+    <script src="assets/js/clean-blog.js"></script>
+    <script src="assets/js/Dark-Mode-Switch.js"></script>
+</body>
+
+</html>
